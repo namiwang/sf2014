@@ -28,4 +28,11 @@ Sf2014::Application.configure do
   config.assets.debug = true
 
   config.assets.compile = true
+
+  # config.middleware.use(Rack::LiveReload,
+  #   :min_delay        => 500,    # default 1000
+  #   :max_delay        => 10_000, # default 60_000
+  #   :live_reload_port => 56789,  # default 35729
+  #   # :host             => '121.199.49.207',
+  # )
 end

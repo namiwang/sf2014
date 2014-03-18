@@ -1,3 +1,168 @@
-@import "bourbon"
-@import "bootstrap"
-@import "main"
+//= require font-awesome
+//= require fonts
+//= require_self
+
+@import bootstrap
+@import bourbon
+
+
+*
+  +transition(all 0.4s)
+  +user-select(none)
+  text-decoration: none
+  color: white
+  cursor: default
+
+body
+  background-position: 0 0
+  background-repeat: no-repeat
+  font-family: 'Open Sans', sans-serif
+
+a
+  color: white
+  &:hover
+    color: white
+    cursor: pointer
+    text-decoration: none
+
+button
+  text-shadow: none
+
+.btn-inverse
+  color: white
+  background-color: transparent
+  border-color: white
+  border-radius: 0
+
+  &:hover
+    color: black
+    background-color: white
+    border-color: white
+  &:focus
+    color: black
+    background-color: white
+    border-color: white
+
+#bg-pattern
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: -1
+  background: image-url("bg-pattern.png") repeat
+  opacity: 0.05
+
+#bg
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: -2
+
+.left-side
+  height: 100%
+  max-width: 205px
+  min-width: 190px
+  background-color: rgba(0,0,0,0)
+  +background-image(linear-gradient(to bottom, rgba(0,0,0,0.29) 0%,rgba(0,0,0,0) 78%,rgba(0,0,0,0) 100%))
+  text-align: center
+
+  .logo
+    margin: 4em 0 2em 0
+
+    h1
+      font-weight: bold
+      margin-bottom: 0
+
+    small
+      color: lightgrey
+
+  .sidenav
+    font-size: 1.2em
+    li.active
+      a
+        font-weight: bold
+        background-color: rgba(0,0,0,0.15)
+    li
+      margin-top: 0
+      a
+        border-radius: 0
+        padding: 0.2em 0
+        &:hover
+          background-color: rgba(0,0,0,0.3)
+
+  footer
+    font-size: 0.9em
+    max-width: 205px
+    min-width: 190px
+    position: fixed
+    bottom: 10px
+
+.right-content
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 3px
+
+  div.content
+    padding-top: 4em
+    padding-bottom: 4em
+    padding-right: 2em
+
+    h1
+      text-align: right
+      margin: 0 2em 2.5em 0
+
+
+  div.content#slide
+    div.carousel
+      +box-shadow(0px 0px 1em white)
+
+      div.carousel-inner div.item
+        height: 480px
+        overflow: hidden
+
+      a.carousel-control
+        +transition(none)
+
+        span
+          cursor: pointer
+
+  div.content#about-us
+    img.logo-chuchuang
+      width: 100%
+
+  div.content#speakers
+    div.speaker
+      text-align: center
+
+      div.caption
+        margin: 1em auto 2em auto
+        font-size: 1.2em
+
+      &:hover
+        div.caption
+          font-weight: bold
+        img
+          border: 0.5em solid
+
+  div.content#cooperations
+    section
+      margin-top: 1em
+
+      i.fa
+        font-size: 5em
+
+      &:first-child
+        margin-top: 0
+
+  div#modal-apply
+    div.modal-body
+      height: 60%
+
+      iframe
+        overflow: scroll
+        height: 100%
+        width: 100%
+
+    h4.modal-title
+      color: black

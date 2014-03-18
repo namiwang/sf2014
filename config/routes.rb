@@ -55,5 +55,6 @@ Sf2014::Application.routes.draw do
   #   end
 
   get 'pages/home' => 'high_voltage/pages#show', id: 'home'
+  root 'high_voltage/pages#show', id: 'home'
 
 end

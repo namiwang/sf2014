@@ -49,3 +49,11 @@ gem 'bootstrap-sass'
 gem 'high_voltage'
 
 gem 'bourbon'
+
+group :development do
+  gem 'guard', :require => false
+  gem 'guard-livereload', :require => false
+  gem 'rack-livereload'
+end
+
+gem 'font-awesome-sass'
