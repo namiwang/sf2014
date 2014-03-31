@@ -17,22 +17,18 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <% pages = ['about_us', 'speakers', 'agenda', 'feathers', 'cooperations'] %>
+          <% pages = ['about', 'speakers', 'agenda', 'news'] %>
           <% pages.each do |p| %>
             <%= content_tag 'li', link_to( t("navbar.#{p}"), page_path(p), class: p ), class: ('active' if params[:id] == p) %>
           <% end %>
           <li><a href="#" class="apply" data-toggle="modal" data-target="#modalApply"><%= t 'navbar.apply' %></a></li>
         </ul>
 
-        <ul class="nav navbar-nav navbar-right language-switcher">
-          <li><a href="#"><span class="glyphicon glyphicon-globe"></span></a></li>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="sns"><a href="#">!</a></li>
+          <li class="sns"><a href="#">$</a></li>
           <li><a href="#">中文</a></li>
           <li><a href="#">English</a></li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right sns">
-          <li><a href="#">!</a></li>
-          <li><a href="#">$</a></li>
         </ul>
 
       </div><!-- /.navbar-collapse -->
