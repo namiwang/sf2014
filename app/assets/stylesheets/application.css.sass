@@ -32,7 +32,7 @@ nav.navbar
     a.apply
       background-color: lightcoral
 
-  ul.navbar-nav.navbar-right.li.sns
+  ul.navbar-nav.navbar-right li.sns a
     font-family: 'wlige'
     font-size: 1.3em
 
@@ -54,10 +54,10 @@ footer.main
   font-size: 0.9em
 
 div.container.speakers
-  div.speaker div.thumbnail
+  div.speaker .thumbnail
     cursor: pointer
 
-    h4
+    div.caption
       text-align: center
 
     &:hover
@@ -80,3 +80,16 @@ div.container.cooperations
     .media-body
       padding: 1em auto auto 1em
       cursor: default
+
+div.container.news
+  div.item
+    padding: 0.5em 0
+
+    .media
+      color: black
+      cursor: pointer
+
+    &:hover
+      background-color: lightgrey
+
+    +transition(background-color 0.4s)
