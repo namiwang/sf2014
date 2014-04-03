@@ -59,3 +59,8 @@ group :development do
 end
 
 gem 'font-awesome-sass'
+
+gem 'rails-i18n'
+
+gem 'devise'
+gem 'activeadmin', github: 'gregbell/active_admin'

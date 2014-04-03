@@ -54,6 +54,9 @@ Sf2014::Application.routes.draw do
   #     resources :products
   #   end
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   get 'pages/home' => 'high_voltage/pages#show', id: 'home'
   root 'high_voltage/pages#show', id: 'home'
 
