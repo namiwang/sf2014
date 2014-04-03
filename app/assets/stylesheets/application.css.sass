@@ -83,13 +83,13 @@ div.container.cooperations
 
 div.container.news
   div.item
-    padding: 0.5em 0
+    padding: 0.5em
+    cursor: pointer
+
+    +transition(background-color 0.4s)
 
     .media
       color: black
-      cursor: pointer
 
     &:hover
-      background-color: lightgrey
-
-    +transition(background-color 0.4s)
+      background-color: whitesmoke
