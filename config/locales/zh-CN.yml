@@ -3,7 +3,7 @@ zh-CN:
     models:
       article: 情报
       static_page: 静态页面
-      speakers: 嘉宾
+      speaker: 嘉宾
       character:
         one: "Personnage"
         other: "Personnages"
