@@ -4,9 +4,6 @@ zh-CN:
       article: 情报
       static_page: 静态页面
       speaker: 嘉宾
-      character:
-        one: "Personnage"
-        other: "Personnages"
 
   navbar:
     about: 关于
