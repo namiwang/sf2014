@@ -1,4 +1,4 @@
-ActiveAdmin.register News do
+ActiveAdmin.register Article do
 
   
   # See permitted parameters documentation:
