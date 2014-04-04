@@ -1,7 +1,16 @@
 zh-CN:
+  activerecord:
+    models:
+      article: 情报
+      static_page: 静态页面
+      speakers: 嘉宾
+      character:
+        one: "Personnage"
+        other: "Personnages"
+
   navbar:
     about: 关于
-    speakers: 嘉宾
+    
     agenda: 日程
     feathers: 专题
     articles: 情报
