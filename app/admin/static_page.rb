@@ -13,5 +13,14 @@ ActiveAdmin.register StaticPage do
   #  permitted << :other if resource.something?
   #  permitted
   # end
+
+  form do |f|
+    f.inputs "Static Page Details" do
+      f.input :name, input_html: {disabled: true}
+      f.input :content, as: :ckeditor
+      # f.cktext_area :text
+    end
+    f.actions
+  end 
  
 end
