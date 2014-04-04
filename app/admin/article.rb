@@ -14,6 +14,11 @@ ActiveAdmin.register Article do
   #  permitted
   # end
 
+  index do
+    column :title
+    default_actions
+  end
+
   form do |f|
     f.inputs "Article Details" do
       f.input :title
