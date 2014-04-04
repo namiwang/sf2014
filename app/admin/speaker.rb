@@ -13,5 +13,16 @@ ActiveAdmin.register Speaker do
   #  permitted << :other if resource.something?
   #  permitted
   # end
+
+  form do |f|
+    f.inputs "Speaker Details" do
+      f.input :name
+      f.input :subtitle
+      f.input :text, as: :ckeditor
+      # f.cktext_area :text
+    end
+    f.actions
+  end
+
   
 end

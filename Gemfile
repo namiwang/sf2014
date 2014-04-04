@@ -64,3 +64,5 @@ gem 'rails-i18n'
 
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
+
+gem 'ckeditor'
