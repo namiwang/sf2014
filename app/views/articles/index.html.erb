@@ -8,7 +8,7 @@
           </div>
           <div class="media-body">
             <h4 class="media-heading"><%= a.title %></h4>
-            <p><%= a.content.truncate(100) %></p>
+            <p><%= (sanitize (strip_tags a.content)).truncate(100) %></p>
           </div>
         </a>
       </div>

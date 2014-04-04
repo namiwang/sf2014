@@ -14,4 +14,13 @@ ActiveAdmin.register Article do
   #  permitted
   # end
 
+  form do |f|
+    f.inputs "Article Details" do
+      f.input :title
+      f.input :content, as: :ckeditor
+    end
+    f.actions
+  end
+
+
 end
