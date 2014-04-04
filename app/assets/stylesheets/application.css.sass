@@ -18,6 +18,10 @@ body
   font-family: Georgia, "Nimbus Roman No9 L", STSong, "AR PL SungtiL GB", NSimSun, SimSun, TW\-Sung, "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", serif
   // font-family: 'Open Sans', sans-serif
 
+  // for fixed top navbar
+  padding-top: 70px
+
+
 
 nav.navbar
   .navbar-brand
@@ -29,8 +33,12 @@ nav.navbar
   ul.nav.navbar-nav
     // a.cooperations
     //   background-color: lightblue
+    a
+      &:hover
+        background-color: #e7e7e7
+
     a.apply
-      background-color: lightcoral
+      background-color: orange
 
   ul.navbar-nav.navbar-right li.sns a
     font-family: 'wlige'
