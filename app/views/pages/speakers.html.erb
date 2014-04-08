@@ -6,7 +6,8 @@
 
           <div class="col-md-3 speaker">
             <a class="thumbnail" href="#" data-toggle="modal" data-target="#modalSpeaker<%= i %>">
-              <%= image_tag "http://www.avatarpro.biz/avatar?s=128&rnd=#{rand}", class: 'img-circle', size: '128x128'  %>
+              <%= image_tag s.avatar.url, class: 'img-circle', size: '128x128'  %>
+              <% #binding.pry %>
               <div class="caption">
                 <h4><%= s.name %></h4>
                 <p><%= s.subtitle %></p>
