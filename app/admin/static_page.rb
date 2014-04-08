@@ -14,6 +14,20 @@ ActiveAdmin.register StaticPage do
   #  permitted
   # end
 
+  index do
+    column :name
+    default_actions
+  end
+
+  show do |ad|
+    attributes_table do
+      row :name
+      row :text do
+        raw ad.content
+      end
+    end
+  end
+
   form do |f|
     f.inputs "Static Page Details" do
       f.input :name, input_html: {disabled: true}
