@@ -7,21 +7,16 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-
-          <div class="item active">
-            <%= image_tag "slide0.jpg" %>
-            <div class="carousel-caption">
-              0
+          <% Article.where(show_in_home_slide: true).each_with_index do |a, i| %>
+            <div class="item<%= ' active' if i == 1 %>">                            
+              <%= link_to article_path(a) do %>
+                <%= image_tag "slide1.jpg" %>
+              <% end %>
+              <div class="carousel-caption">
+                <%= a.title %>
+              </div>
             </div>
-          </div>
-
-          <div class="item">
-            <%= image_tag "slide1.jpg" %>
-            <div class="carousel-caption">
-              1
-            </div>
-          </div>
-
+          <% end %>
         </div>
 
         <!-- Controls -->
@@ -37,27 +32,17 @@
 
   <div class="container links">
     <div class="row">
-      <div class="col-md-4">
-        <a class="thumbnail" href="#">
-          <div class="caption">
-            <h4>Something here</h4>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a class="thumbnail" href="#">
-          <div class="caption">
-            <h4>Something here</h4>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a class="thumbnail" href="#">
-          <div class="caption">
-            <h4>Something here</h4>
-          </div>
-        </a>
-      </div>
+
+      <% Article.where(show_in_home_topic: true).first(3).each do |a| %>
+        <div class="col-md-4">
+          <a class="thumbnail" href="<%= article_path a %>">
+            <div class="caption">
+              <h4><%= a.title %></h4>
+            </div>
+          </a>
+        </div>
+      <% end %>
+
     </div>
   </div>
 
