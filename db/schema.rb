@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140408110014) do
+ActiveRecord::Schema.define(version: 20140408110015) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -47,10 +47,14 @@ ActiveRecord::Schema.define(version: 20140408110014) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
   create_table "articles", force: true do |t|
-    t.string  "title"
-    t.text    "content"
-    t.boolean "show_in_home_slide"
-    t.boolean "show_in_home_topic"
+    t.string   "title"
+    t.text     "content"
+    t.boolean  "show_in_home_slide"
+    t.boolean  "show_in_home_topic"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
   end
 
   create_table "ckeditor_assets", force: true do |t|

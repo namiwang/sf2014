@@ -10,7 +10,7 @@
           <% Article.where(show_in_home_slide: true).each_with_index do |a, i| %>
             <div class="item<%= ' active' if i == 1 %>">                            
               <%= link_to article_path(a) do %>
-                <%= image_tag "slide1.jpg" %>
+                <%= image_tag a.cover.url %>
               <% end %>
               <div class="carousel-caption">
                 <%= a.title %>
