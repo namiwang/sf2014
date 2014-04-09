@@ -8,10 +8,9 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <% Article.where(show_in_home_slide: true).each_with_index do |a, i| %>
-            <div class="item<%= ' active' if i == 1 %>">                            
-              <%= link_to article_path(a) do %>
-                <%= image_tag a.cover.url %>
-              <% end %>
+            <div class="item<%= ' active' if i == 1 %>">
+              <a href="<%= article_path a %>" style="background-image: url('<%= a.cover.url %>')">
+              </a>
               <div class="carousel-caption">
                 <%= a.title %>
               </div>
@@ -30,12 +29,12 @@
     </div>  
   </div>
 
-  <div class="container links">
+  <div class="container topics">
     <div class="row">
 
       <% Article.where(show_in_home_topic: true).first(3).each do |a| %>
         <div class="col-md-4">
-          <a class="thumbnail" href="<%= article_path a %>">
+          <a class="thumbnail" href="<%= article_path a %>" style="background-image: url('<%= a.cover.url %>')">
             <div class="caption">
               <h4><%= a.title %></h4>
             </div>
