@@ -108,13 +108,22 @@ div.container.cooperations
 
 div.container.articles
   div.item
-    padding: 0.5em
+    padding: 1em
     cursor: pointer
 
     +transition(background-color 0.4s)
 
     .media
       color: black
+
+      .media-object
+        height: 90px
+        width: 120px
+
+        display: block
+        background-size: cover
+        background-position: 50% 50%
+        background-repeat: none
 
     &:hover
       background-color: whitesmoke

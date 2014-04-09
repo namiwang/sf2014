@@ -4,7 +4,8 @@
       <div class="item col-md-6">
         <a class="media" href="<%= article_path(a) %>">
           <div class="pull-left">
-            <%= image_tag "http://www.avatarpro.biz/avatar?s=64&rnd=#{rand}", class: 'media-object', size: '64x64'  %>
+            <div class="media-object" style="background-image: url('<%= a.cover.url %>')">              
+            </div>
           </div>
           <div class="media-body">
             <h4 class="media-heading"><%= a.title %></h4>
