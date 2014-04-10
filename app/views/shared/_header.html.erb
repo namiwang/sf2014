@@ -17,10 +17,13 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <% pages = ['about', 'speakers', 'agenda'] %>
+          <% pages = ['about', 'speakers'] %>
           <% pages.each do |p| %>
             <%= content_tag 'li', link_to( t("navbar.#{p}"), page_path(p), class: p ), class: ('active' if params[:id] == p) %>
-          <% end %>          
+          <% end %>
+
+          <%= content_tag 'li', link_to( t("navbar.agendas"), agenda_path(id: 1), class: 'articles' ), class: ('active' if controller_name == 'agendas' ) %>
+
           <%= content_tag 'li', link_to( t("navbar.articles"), in_page_articles_path(page: 1), class: 'articles' ), class: ('active' if controller_name == 'articles' ) %>
           <li><a href="#" class="apply" data-toggle="modal" data-target="#modalApply"><%= t 'navbar.apply' %></a></li>
         </ul>

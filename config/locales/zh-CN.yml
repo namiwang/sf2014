@@ -4,12 +4,19 @@ zh-CN:
       article: 情报
       static_page: 静态页面
       speaker: 嘉宾
+      agenda: 日程
+      schedual: 日程项
 
   navbar:
     about: 关于
     speakers: 嘉宾    
-    agenda: 日程
+    agendas: 日程
     feathers: 专题
     articles: 情报
     cooperations: 合作
     apply: 报名参会
+
+  schedual:
+    time: 时间
+    content: 内容
+    speaker: 嘉宾

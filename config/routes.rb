@@ -62,6 +62,8 @@ Sf2014::Application.routes.draw do
     get 'page/:page', :action => :index, :on => :collection, as: :in_page
   end
 
+  resources :agendas, only: [:show]
+  
   get 'pages/home' => 'high_voltage/pages#show', id: 'home'
   root 'high_voltage/pages#show', id: 'home'
 
