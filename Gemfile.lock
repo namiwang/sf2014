@@ -237,6 +237,7 @@ DEPENDENCIES
   high_voltage
   jbuilder (~> 1.2)
   jquery-rails
+  kaminari
   paperclip
   pry
   rack-livereload

@@ -68,3 +68,5 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'ckeditor'
 
 gem 'paperclip'
+
+gem 'kaminari'

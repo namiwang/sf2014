@@ -1,6 +1,6 @@
 <div class="container articles">
   <div class="row">
-  <% Article.all.each_with_index do |a, i| %>
+    <% @articles.each_with_index do |a, i| %>
       <div class="item col-md-6">
         <a class="media" href="<%= article_path(a) %>">
           <div class="pull-left">
@@ -14,5 +14,9 @@
         </a>
       </div>
     <% end %>
+
+    <%= paginate @articles %>
+    <% binding.pry %>
+
   </div>
 </div>
