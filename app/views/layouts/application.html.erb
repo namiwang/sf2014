@@ -33,6 +33,7 @@
   </div>
 
   <!-- GA here -->
+  <%= (raw Page.find_by(name: 'google_analytics').content) if Page.find_by(name: 'google_analytics') %>
 
   <!-- specify scripts -->
 
